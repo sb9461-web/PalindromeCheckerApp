@@ -1,16 +1,21 @@
 public class PalindromeCheckerApp {
     static void main() {
-        String word = "madam";
-        boolean isPalindrome = true;
-        int n = word.length() - 1;
+        String word = "BHAAI" ;
+        char[] chars = word.toCharArray();
         int start = 0;
-        for (int i =0; i >0; i--){
-            if (word.charAt(i) != word.charAt(start)) {
+        int end = chars.length - 1;
+        boolean ispalindrome = true;
+        boolean isPalindrome = false;
+        while (start < end) {
+            if (word.charAt(end) != word.charAt(start)) {
                 isPalindrome = false;
                 break;
             }
+            start++;
+            end--;
         }
-        if (isPalindrome) {
+
+        if(isPalindrome) {
             System.out.println(word + " is a palindrome.");
         } else {
             System.out.println(word + " is not a palindrome.");
